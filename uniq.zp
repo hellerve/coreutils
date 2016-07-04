@@ -1,0 +1,9 @@
+(|> zepto:args
+    car
+    read-contents
+    ($ (string:split % #\newline))
+    (curry reduce
+           (lambda (acc elem) (if (eq? elem (get-from acc 0)) acc (cons elem acc)))
+           [])
+    (curry map write))
+(exit 0)

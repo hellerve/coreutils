@@ -1,0 +1,2 @@
+(with-output-file (car zepto:args) id)
+(exit 0)

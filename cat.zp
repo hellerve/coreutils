@@ -1,0 +1,7 @@
+(if (file-exists? (car zepto:args))
+  (begin
+    (|> zepto:args car read-contents display)
+    (exit 0))
+  (begin
+    (error "cat:" "foo:" "No such file")
+    (exit 1)))

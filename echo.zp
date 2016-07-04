@@ -1,0 +1,2 @@
+(|> zepto:args car write)
+(exit 0)

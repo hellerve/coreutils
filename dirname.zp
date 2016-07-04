@@ -1,0 +1,7 @@
+(|> zepto:args
+    car
+    ($ (string:split % "/"))
+    ($ (list:take (sub1 (length %)) %))
+    ($ (string:join % "/"))
+    write)
+(exit 0)

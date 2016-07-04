@@ -1,0 +1,6 @@
+(|> zepto:args
+    car
+    ($ (string:split % "/"))
+    list:last
+    write)
+(exit 0)

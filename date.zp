@@ -1,0 +1,9 @@
+(load "datetime/datetime")
+(import-all "datetime")
+
+(|> unix-timestamp
+    car
+    datetime:from-unix-timestamp
+    datetime:to-string
+    write)
+(exit 0)
